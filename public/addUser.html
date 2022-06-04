@@ -89,8 +89,8 @@
         };
 
         // post user
-        const url = "process.env.PORT:/add"; ???
-        // const url = 'http://localhost:3000/add';
+        const url = '/api/add'; 
+        //const url = 'http://localhost:3000/add';
         superagent
           .post(url)
           .send(user)

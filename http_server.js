@@ -24,12 +24,12 @@ db.defaults({ users: [] }).write();
 let port = process.env.PORT || 3000;
 
 // return all users
-app.get('/data', function (req, res) {
+app.get('/api/data', function (req, res) {
     res.send(db.get('users').value());
 });
 
 // add user
-app.post('/add', function (req, res) {
+app.post('/api/add', function (req, res) {
     var user = {
         'name': req.body.name,
         'dob': req.body.dob,
